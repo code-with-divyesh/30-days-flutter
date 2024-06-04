@@ -1,4 +1,5 @@
 import "package:catlogapp/pages/home.dart";
+import "package:catlogapp/utils/routes.dart";
 import "package:flutter/material.dart";
 import 'package:catlogapp/pages/loginpage.dart';
 
@@ -16,8 +17,8 @@ class MyApp extends StatelessWidget {
       // home: myHome(),
       routes: {
         "/": (context) => Login_page(),
-        "/home": (context) => myHome(),
-        "/loginpage": (context) => Login_page(),
+        MyRoutes.HomeRoute: (context) => myHome(),
+        MyRoutes.LoginRoute: (context) => Login_page(),
       },
     );
   }
