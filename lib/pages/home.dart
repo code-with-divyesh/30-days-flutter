@@ -6,8 +6,10 @@ class myHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("CatlogApp"),
-        backgroundColor: Colors.amberAccent,
+        title: Text(
+          "CatlogApp",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
       body: Center(
         child: Text("first day of day 30"),

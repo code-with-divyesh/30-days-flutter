@@ -1,4 +1,5 @@
 import "package:catlogapp/pages/home.dart";
+import "package:catlogapp/themes/themes.dart";
 import "package:catlogapp/utils/routes.dart";
 import "package:flutter/material.dart";
 import 'package:catlogapp/pages/loginpage.dart';
@@ -15,6 +16,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: myHome(),
+      theme: MyTheme.LightTheme,
+      darkTheme: MyTheme.DarkTheme,
       initialRoute: MyRoutes.HomeRoute,
       routes: {
         "/": (context) => Login_page(),
