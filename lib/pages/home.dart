@@ -1,3 +1,4 @@
+import "package:catlogapp/drawer/drawer.dart";
 import "package:flutter/material.dart";
 
 class myHome extends StatelessWidget {
@@ -11,7 +12,7 @@ class myHome extends StatelessWidget {
       body: Center(
         child: Text("first day of day 30"),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
