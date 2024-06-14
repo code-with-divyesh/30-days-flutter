@@ -61,9 +61,9 @@ class CatalogueItem extends StatelessWidget {
                       onPressed: () {
                         print("${catalogue.name} clicked");
                       },
-                      child: "Buy".text.color(Colors.white).make()),
+                      child: "Cart".text.medium.color(Colors.white).make()),
                 ],
-              ).pOnly(right: 4.0),
+              ).pOnly(right: 2.0),
             ],
           ))
         ],

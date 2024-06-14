@@ -1,3 +1,4 @@
+import "package:catlogapp/pages/cart_page.dart";
 import "package:catlogapp/pages/home.dart";
 import "package:catlogapp/themes/themes.dart";
 import "package:catlogapp/utils/routes.dart";
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => Login_page(),
         MyRoutes.HomeRoute: (context) => myHome(),
         MyRoutes.LoginRoute: (context) => Login_page(),
+        MyRoutes.cartRoute: (context) => cartPage(),
       },
     );
   }

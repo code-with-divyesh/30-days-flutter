@@ -19,7 +19,9 @@ class homeDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyTheme.creamcolor,
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       bottomNavigationBar: Container(
         color: Colors.white,
         child: ButtonBar(
@@ -33,8 +35,8 @@ class homeDetailPage extends StatelessWidget {
                     onPressed: () {
                       print("${catalog.name} clicked");
                     },
-                    child: "Buy".text.xl2.color(Colors.white).make())
-                .wh(110, 50),
+                    child: "Add To Cart".text.xl2.color(Colors.white).make())
+                .wh(150, 50),
           ],
         ).p8(),
       ),
@@ -58,8 +60,14 @@ class homeDetailPage extends StatelessWidget {
                   children: [
                     catalog.name.text.xl3.bold.make(),
                     catalog.desc.text.xl.textStyle(context.captionStyle).make(),
+                    10.heightBox,
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's  dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+                        .text
+                        .textStyle(context.captionStyle)
+                        .make()
+                        .p16()
                   ],
-                ).p32(),
+                ).py64(),
               ),
             ))
           ],

@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import "dart:convert";
 
+import "package:catlogapp/utils/routes.dart";
 import "package:catlogapp/widgets/home_widgets/catalogHeader.dart";
 import "package:catlogapp/widgets/home_widgets/catalog_list.dart";
 import "package:flutter/cupertino.dart";
@@ -42,6 +43,11 @@ class _myHomeState extends State<myHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+          child: Icon(CupertinoIcons.cart),
+          onPressed: () {
+            Navigator.pushNamed(context, MyRoutes.cartRoute);
+          }),
       backgroundColor: MyTheme.creamcolor,
       body: SafeArea(
         child: Container(
