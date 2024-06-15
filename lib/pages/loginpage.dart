@@ -1,5 +1,7 @@
+import "package:catlogapp/themes/themes.dart";
 import "package:catlogapp/utils/routes.dart";
 import "package:flutter/material.dart";
+import "package:velocity_x/velocity_x.dart";
 
 class Login_page extends StatefulWidget {
   @override
@@ -25,8 +27,10 @@ class _Login_pageState extends State<Login_page> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+    final fabColor = isDarkMode ? MyTheme.lightbluishcolor : Colors.deepPurple;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: context.canvasColor,
       body: SingleChildScrollView(
         child: Form(
           key: formkey,
@@ -104,7 +108,7 @@ class _Login_pageState extends State<Login_page> {
                                     color: Colors.white),
                               ),
                         decoration: BoxDecoration(
-                          color: Colors.purple,
+                          color: fabColor,
                           borderRadius:
                               BorderRadius.circular(changebutton ? 50 : 8),
                         ),

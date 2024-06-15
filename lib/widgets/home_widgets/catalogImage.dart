@@ -13,6 +13,6 @@ class cataLogImage extends StatelessWidget {
     return Image.network(
       image,
       fit: BoxFit.contain,
-    ).box.rounded.p8.color(MyTheme.creamcolor).make().p16().w40(context);
+    ).box.rounded.p8.color(context.canvasColor).make().p16().w40(context);
   }
 }

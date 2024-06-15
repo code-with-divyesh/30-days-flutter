@@ -42,13 +42,21 @@ class _myHomeState extends State<myHome> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+    final fabColor =
+        isDarkMode ? MyTheme.lightbluishcolor : MyTheme.darkbluishcolor;
+
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-          child: Icon(CupertinoIcons.cart),
+          child: Icon(
+            CupertinoIcons.cart,
+            color: Colors.white,
+          ),
+          backgroundColor: fabColor,
           onPressed: () {
             Navigator.pushNamed(context, MyRoutes.cartRoute);
           }),
-      backgroundColor: MyTheme.creamcolor,
+      backgroundColor: context.canvasColor,
       body: SafeArea(
         child: Container(
           padding: Vx.m32,

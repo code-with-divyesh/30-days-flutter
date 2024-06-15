@@ -44,30 +44,34 @@ class CatalogueItem extends StatelessWidget {
               tag: Key(catalogue.id.toString()),
               child: cataLogImage(image: catalogue.image)),
           Expanded(
-              child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              catalogue.name.text.lg.bold.make(),
-              catalogue.desc.text.textStyle(context.captionStyle).make(),
-              10.heightBox,
-              ButtonBar(
-                alignment: MainAxisAlignment.spaceBetween,
-                // buttonPadding: Vx.m4,
-                children: [
-                  "\$${catalogue.price}".toString().text.xl.bold.make(),
-                  ElevatedButton(
-                      style: TextButton.styleFrom(
-                          backgroundColor: Colors.deepPurple),
-                      onPressed: () {
-                        print("${catalogue.name} clicked");
-                      },
-                      child: "Cart".text.medium.color(Colors.white).make()),
-                ],
-              ).pOnly(right: 2.0),
-            ],
+              child: Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                catalogue.name.text.lg.bold.make(),
+                10.heightBox,
+                catalogue.desc.text.textStyle(context.captionStyle).make(),
+                10.heightBox,
+                ButtonBar(
+                  alignment: MainAxisAlignment.spaceBetween,
+                  // buttonPadding: Vx.m4,
+                  children: [
+                    "\$${catalogue.price}".toString().text.xl.bold.make(),
+                    ElevatedButton(
+                        style: TextButton.styleFrom(
+                            backgroundColor: Colors.deepPurple),
+                        onPressed: () {
+                          print("${catalogue.name} clicked");
+                        },
+                        child: "Cart".text.medium.color(Colors.white).make()),
+                  ],
+                ).pOnly(right: 2.0),
+              ],
+            ),
           ))
         ],
       ),
-    ).white.rounded.square(150).make().py16();
+    ).color(context.cardColor).rounded.square(150).make().py16();
   }
 }

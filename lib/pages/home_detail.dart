@@ -18,12 +18,12 @@ class homeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyTheme.creamcolor,
+      backgroundColor: context.canvasColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           // buttonPadding: Vx.m4,
@@ -45,16 +45,17 @@ class homeDetailPage extends StatelessWidget {
         child: Column(
           children: [
             Hero(
-                    tag: Key(catalog.id.toString()),
-                    child: Image.network(catalog.image))
-                .h32(context),
+                tag: Key(catalog.id.toString()),
+                child: Image.network(
+                  catalog.image,
+                )).h32(context),
             Expanded(
                 child: VxArc(
               height: 30.0,
               edge: VxEdge.TOP,
               arcType: VxArcType.CONVEY,
               child: Container(
-                color: Colors.white,
+                color: context.cardColor,
                 width: context.screenWidth,
                 child: Column(
                   children: [
