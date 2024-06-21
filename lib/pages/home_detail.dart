@@ -32,9 +32,7 @@ class homeDetailPage extends StatelessWidget {
             ElevatedButton(
                     style: TextButton.styleFrom(
                         backgroundColor: Colors.deepPurple),
-                    onPressed: () {
-                      print("${catalog.name} clicked");
-                    },
+                    onPressed: () {},
                     child: "Add To Cart".text.xl2.color(Colors.white).make())
                 .wh(150, 50),
           ],
